@@ -1,0 +1,25 @@
+<CATALOG>
+<DOG>
+<NAME>German Shepherd</NAME>
+<PRICE>Rs.30000</PRICE>
+
+</DOG>
+<DOG>
+<NAME>Rottweiler</NAME>
+<PRICE>Rs.55000</PRICE>
+
+</DOG>
+<DOG>
+<NAME>Great Dane</NAME>
+<PRICE>Rs.55000</PRICE>
+
+</DOG>
+<DOG>
+<NAME>Bullmastiff</NAME>
+<PRICE>Rs.100000</PRICE>
+
+</DOG>
+
+
+
+</CATALOG>

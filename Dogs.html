@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+div.static {
+  position: static;
+  border: 3px solid #73AD21;
+}
+</style>
+<style>
+body {
+  background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+</style>
+    <style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="static">
+    <h1>Prices of dogs in Sri Lanka </h1>
+
+<button type="button" onclick="loadDoc()">price list</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "cd_catalog.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
+  var x = xmlDoc.getElementsByTagName("DOG");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+<div cllass="container">
+  <h2>1.German Shepherd</h2>
+  <p>The German Shepherd is one of the highly popular dog breeds in Sri Lanka. This is no wonder as they come as a whole package. They are kind, gentle, caring, and loving. At the same time, they are loyal, intelligent, and protective. In fact, they proudly take their place among the top ten best guard dogs in the world. As you know, they are also a popular choice for Sri Lankan police dogs.
+
+      Several of their features and characteristics make them good watch dogs. </p>
+
+<h3>Intelligence</h3><p>
+They learn quickly. So, if you have your own tips and tricks you want to teach your German Shepherd, it’s not going to be a tiring job.</p> 
+
+<h3>Love and protect kids</h3><p>
+German Shepherds think of your kids as pups in their pack. So, they not only love kids, they also instinctively take care of them.</p>
+
+<h3>Powerful bark</h3><p>
+Their strong, loud bark is not misleading. Moreover, it will also make any intruder think twice.</p>
+
+<h3>Strength </h3><p>
+They are a strong, large breed. So, it’s not going to be easy for an intruder to tackle a large, strong German Shepherd.</p>            
+  <img src="images/german-shepherd-sri-lanka.jpeg" class="img-german" alt="Cinque Terre" width="304" height="236"> 
+</div>
+    <div cllass="container">
+  <h2>2.Rottweiler</h2>
+  <p>Rottweilers are another popular breed of dogs in Sri Lanka. Their strong jaws with their intimidating look is enough to scare off any person. In fact, Rottweilers are among the most powerful dog breeds, and they have one of the highest bite forces  / strongest bites, in any dog. As a result, Rottweilers are also a popular choice for police dogs. 
+
+What characteristics make them good guard dogs? </p>
+
+<h3>Protective nature</h3><p>
+Rottweilers are of highly protective nature. They are loyal and dedicated. You can trust them not to leave their post even if there is a squirrel running around out there. </p> 
+
+<h3>Loyal to the master</h3><p>
+Rottweilers are affectionate towards their master. On the other hand, they do not show any friendliness towards strangers. </p>
+
+<h3>Strength</h3><p>
+Rottweilers are one of the strongest dog breeds out there. In turn, they have an intense energy level. So, they need lots of exercise as well as mental stimulation. If they do not get enough of these, they tend to become aggressive and destructive.</p>
+
+<h3>Intelligence </h3><p>
+Their intelligence makes it easier to teach them commands as they learn fast. What you need to remember is that they are stubborn, and you need to be strict so that they do not get their way.</p>            
+  <img src="images/rottweiler-sri-lanka.jpeg" class="img-german" alt="Cinque Terre" width="304" height="236"> 
+</div>
+       <div cllass="container">
+  <h2>3.Great Dane</h2>
+  <p>The Great Dane is a large breed of dogs. In fact, they hold several Guinness world records for their height and size. 
+
+In nature, Great Danes are charming and affectionate. They are also patient and child-friendly. Moreover, they are calm and composed. However, they will get aggressive when the situation requires it. Hence, they make excellent watch dogs that are affectionate to the family.   </p>
+
+<h3>Barking </h3><p>
+Their boisterous mighty bark is very intimidating, and will scare any intruders. </p> 
+
+<h3>Appearance </h3><p>
+Their intimidating size and gaze can scare off even a non-intruder. </p>
+
+<h3>Protectiveness</h3><p>
+They are very protective of their guardian environment. If they feel something is out of the ordinary, they are quick to become aggressive in order to protect their family. </p>
+
+            
+  <img src="images/great-dane-sri-lanka.jpeg" class="img-great" alt="Cinque Terre" width="304" height="236"> 
+</div>
+       <div cllass="container">
+  <h2>4.Bullmastiff</h2>
+  <p>If you want a large, companionable guard dog to join your family, a Bullmastiff will be the right for you. They are massive, confident, and muscular. This breed was originally bred as watch dogs for gamekeepers and poachers.   </p>
+
+<h3>Barking </h3><p>
+The Bullmastiff does not bark much. Instead, they keep quiet and confront the intruder as if silently aiming for a prey. In fact, because of this nature, they have got the name “silent watchdog”.  </p> 
+
+<h3>Size  </h3><p>
+They are massive! At the same time, this is to their advantage. They will watch an intruder in silence and then confront the intruder. Their immense size and strength, added to the abruptness of the attack, will have any intruder lying flat on the floor. </p>
+
+<h3>Loyalty</h3><p>
+Bullmastiffs are a protective breed. Their loyalty goes to the extent of putting themselves in harm’s way to protect their family. </p>
+
+            
+  <img src="images/bullmastiff-sri-lanka.jpg" class="img-great" alt="Cinque Terre" width="304" height="236"> 
+</div></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="https://ajax. googleapis.com/ajax/libs/ jquery/3.1.e/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/ bootstrap/3.3.6/css/bootstrap.min.css" />
+<script></script>
+</head>
+
+<body>
+<p>You can visit our store</p>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped" id="dog">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>
+<script>
+$(document).ready(function(){
+    $.getJSON("dogs.json",function(data){
+        var dog='';
+        $.each(data,function(key,value){
+            dog +=  '<tr>';
+            dog += '<td>'+value.name+ '</td>';
+           dog += '<td>'+value.address+ '</td>';
+            dog +=  '</tr>';
+        });
+        $('#dog').append(dog);
+    });
+});</script>
